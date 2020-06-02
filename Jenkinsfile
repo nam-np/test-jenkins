@@ -7,6 +7,7 @@ pipeline {
                 echo '===================== Install dependencies ====================='
                 sh 'npm i'
                 sh 'ls'
+                sh 'node_modules/.bin/cypress run  --reporter junit -s cypress/integration/sw360/homepage/login.spec.js'
             }
         }
     }
